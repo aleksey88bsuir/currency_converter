@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>300</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>300</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Конвертор валют</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <widget class="QPushButton" name="b_convert">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>230</y>
+      <width>141</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Конвертировать</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="qconvert_line">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>251</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="placeholderText">
+     <string>Введите сумму для конвертации</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="qcurrency_in">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>90</y>
+      <width>290</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="editable">
+     <bool>false</bool>
+    </property>
+    <property name="insertPolicy">
+     <enum>QComboBox::InsertAtTop</enum>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="qcurrency_out">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>150</y>
+      <width>290</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="qlabel_currency_out">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>124</y>
+      <width>251</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Выберите в какую валюту конвертируем</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="qlabel_currency_in">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>60</y>
+      <width>231</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Выберите конвертируемую валюту</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="qtext_result">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>200</y>
+      <width>181</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Результат конвертации:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="qresult">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>200</y>
+      <width>121</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="qtext_data_result">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>180</y>
+      <width>181</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Курс на дату:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="qresult_date">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>180</y>
+      <width>181</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="l_online_offline">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>0</y>
+      <width>67</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>300</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Меню</string>
+    </property>
+    <widget class="QMenu" name="m_history">
+     <property name="title">
+      <string>История конвертаций</string>
+     </property>
+     <addaction name="m_open_history"/>
+     <addaction name="m_del_history"/>
+    </widget>
+    <widget class="QMenu" name="menu_currency_exchange">
+     <property name="title">
+      <string>Конвертация валюты</string>
+     </property>
+     <addaction name="m_add_currency"/>
+     <addaction name="separator"/>
+     <addaction name="m_default_settings"/>
+    </widget>
+    <addaction name="separator"/>
+    <addaction name="menu_currency_exchange"/>
+    <addaction name="m_history"/>
+   </widget>
+   <widget class="QMenu" name="m_about_us">
+    <property name="title">
+     <string>О приложении</string>
+    </property>
+    <addaction name="m_manual"/>
+    <addaction name="m_donate"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="m_about_us"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="m_open_history">
+   <property name="text">
+    <string>Открыть историю</string>
+   </property>
+  </action>
+  <action name="m_del_history">
+   <property name="text">
+    <string>Очистить историю</string>
+   </property>
+  </action>
+  <action name="m_add_currency">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Добавить/удалить валюту для конвертации</string>
+   </property>
+  </action>
+  <action name="m_del_currency">
+   <property name="text">
+    <string>Удалить валюту для конвертации</string>
+   </property>
+  </action>
+  <action name="m_default_settings">
+   <property name="text">
+    <string>Настройки по умолчанию</string>
+   </property>
+  </action>
+  <action name="m_online">
+   <property name="text">
+    <string>Через глобальную паутину</string>
+   </property>
+  </action>
+  <action name="m_offline">
+   <property name="text">
+    <string>Автономно</string>
+   </property>
+  </action>
+  <action name="m_manual">
+   <property name="text">
+    <string>Рук-во по эксплуатации</string>
+   </property>
+  </action>
+  <action name="m_donate">
+   <property name="text">
+    <string>Поддержать проект</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
